@@ -1,0 +1,12 @@
+.header img {
+    display: block;
+    margin: 0;
+    height: 400px;
+    border-radius: 10px;
+    margin: 20px auto;
+    transition: all 250ms;
+  }
+  
+.header img:hover {
+box-shadow: 0 0 10px grey;
+}

@@ -1,0 +1,39 @@
+.blog-post {
+    background-color: #f8f8f8;
+    padding: 20px 30px;
+    border: 1px solid #adadad;
+    border-radius: 2px;
+    margin: 10px 0;
+}
+
+.blog-post a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.blog-post .info {
+    font-size: 13px;
+    height: 100%;
+    /* display: inline-block; */
+    vertical-align: middle;
+    color: #727272;
+}
+
+.blog-post .info > div {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.blog-post .info img {
+    margin-right: 2px;
+}
+
+.blog-post img {
+    width: 18px;
+    vertical-align: middle;
+}
+.blog-post a:hover {
+    color: #004b7a;
+}
