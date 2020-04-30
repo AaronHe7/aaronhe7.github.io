@@ -21,7 +21,7 @@
     display: inline-block;
 }
 .problem-img > img {
-    width: 80%;
+    width: 75%;
 }
 @media only screen and (max-width: 600px) {
     .problem-img > img {
