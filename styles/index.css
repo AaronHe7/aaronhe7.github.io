@@ -8,5 +8,28 @@
   }
   
 .header img:hover {
-box-shadow: 0 0 10px grey;
+  box-shadow: 0 0 10px grey;
+}
+
+.intro-paragraph {
+  margin-bottom: 30px;  
+  font-size: 16px;
+}
+
+.cards {
+  margin: 10px 0;
+}
+
+.cards img {
+  transition: all 250ms;
+}
+
+.cards img:hover {
+  box-shadow: 0 0 10px grey;
+}
+
+.card {
+  width: 250px;
+  border-radius: 10px;
+  margin: 10px;
 }

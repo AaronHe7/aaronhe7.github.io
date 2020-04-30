@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Aaron He</title>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="/styles/styles.css">
+      <link type="text/css" rel="stylesheet" href="/styles/blog.css">
+      <link type="text/css" rel="stylesheet" href="/styles/blog-post.css">
+      <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+      <div class="header">
+        <nav class="grey">
+          <h1><a href="/">Aaron He</a></h1>
+          <a href="/projects">Projects</a>
+          <a href="/blog">Blog</a>
+          <a href="https://github.com/AaronHe7/" target="_blank">Github</a>
+        </nav>
+      </div>
+      <div class="content">
+        <div style="display: none;" id="post-id">0</div>
+        <h1 class="center"></h1>
+        <div class="details"></div>
+        <img class="header-img" src="./img/header-img.png/" alt="header image">
+        <p>These are my solutions to the <a href="https://cemc.uwaterloo.ca/contests/past_contests/2020/2020EuclidContest.pdf">2020 Euclid Contest</a> by the University of Waterloo. Due to the coronavirus, the contest has been cancelled,
+            and as of April 27, 2020, the contest problems have been released. 
+            This page is a formal write up for the solutions. It is a great place to see how math solutions are structured, however these do not provide motivation
+            for the solutions. For a playlist to video explanations that provide a step by step guide, click <a href="">here</a>.
+        </p>
+        <p>In summary, this year's Euclid had very many algebra problems, and all the geometry problems in this contest were also algebra heavy.
+            Problem nine was the most interesting one for me. The problem can be solved using a recurrence relation, and requires one to think outside
+            of the box and create a closed form for this relation. The image above depicts the construction in the problem.
+        </p>
+        <hr>
+        <h2>Problem 1</h2>
+        <img width="300" src="img/1a.png" alt="1a" class="problem-img">
+        <p>
+            For all values of \(x \ne -2\), \(3x + 6 \over x+2 \) \(=\) \(3(x+2) \over x+2\) \(=\) \(3\). Hence, for \(x = 11\), the value of the expression is \(3\).
+        </p><hr>
+        <img width="550" src="img/1b.png" alt="1b" class="problem-img">
+        <p>
+            The slope of the line is \(7-5 \over 1-(-1)\) \(=1\). Since the point \((-1, 5)\) exists on the line, then the point \((-1+1, 5+1) = (0, 6)\) must as well.
+            Thus the y-intercept is \(y = 6\).
+        </p><hr>
+        <img width="550" src="img/1c.png" alt="1c" class="problem-img">
+        <p>
+            Equating the y-values of the first two lines, we obtain \(3x+7=x+9 \implies x=1\). Substituting \(x\) inside the first equation yields
+            \(y=10\). Since the first two lines intersect at \((3, 10)\), so must the third line. Hence, \(m+17=10 \implies m=-7\).
+        </p><hr>
+        <h2>Problem 2</h2>
+        <img width="550" src="img/2a.png" alt="2a" class="problem-img">
+        <p>Let the three digits be \(a\), \(b\), and \(c\) respectively so that \(m=100a+10b+c\). It is given that \(a=bc\), and \(c\) is odd. Since the digits are distinct,
+            \(c > 1\) and \(b > 1\), because otherwise \(a = b\) or \(a = c\). Now, since \(c\) is odd, \(c \geq 3\) and \(a \leq 9 \implies bc \leq 9 \implies 3b \leq 9 \implies b = 2\) or \(b = 3\).
+            If \(b = 3\), then the smallest value \(a\) can be is \(5\), which is too large. Thus, \(b = 2\), and \(bc \leq 9\) implies that \(c \leq 4\). For odd values, the only possibility
+            is \(c = 3\). Finally, \(a = 2 * 3 = 6\), and \(m = 623\).
+        </p><hr>
+        <img width="550" src="img/2b.png" alt="2b" class="problem-img">
+        <p>
+            Initially, let there be \(g\) gold marbles and \(b\) black marbles. Then, \(b \over g\) \(=\) \(1 \over 4\) \(\implies 4b=g\). Since there are \(100\) marbles,
+            \(b + g = 100 \implies 5b = 100 \implies b=20\). This means there are \(20\) black marbles and \(80\) gold marbles. Let the number of marbles that Eleanor add be
+            \(x\). Then, \(20 \over 80 + x\) \(=\) \(1 \over 6\) \(\implies x=20\). Hence she must add \(20\) gold marbles.
+        </p><hr>
+        <img width="550" src="img/2c.png" alt="2c" class="problem-img">
+        <p>
+            We can rewrite the expression as \(n + 1 + \)\(15 \over n\). Since \(n + 1\) is an integer, all we need is for \(15 \over n\) to be an integer. Thus \(n\) must be a
+            divisor of \(15\). For positive integers, we can have \(n=1, 3, 5, 15\).
+        </p><hr>
+        <h2>Problem 3</h2>
+        <img width="550" src="img/3a.png" alt="3a" class="problem-img">
+        <p>
+            Note that triangles \(CDE\) and \(EFG\) are both isosceles right triangles. Hence, \(CD = 1\) and \(CE = GE = \sqrt2\). Now, \(CEG\) is also an isosceles right triangle
+            since \(CE = GE\) and \(\angle CEG = 180^\circ - 45^\circ - 45^\circ = 90^\circ\). 
+        </p>
+        <p>\(BCG\) is another isosceles right triangle since \(\angle BCG = 180^\circ - \angle DCE - \angle ECG = 90^\circ\), and 
+            \(\angle CBG = BGH = 45^\circ\) (\(AD\) and \(HF\) are parallel). Finally, \(BC = 2\), and \(BD = BC + CD = 3\).
+        </p><hr>
+        <img width="550" src="img/3b.png" alt="3b" class="problem-img">
+        <p></p><hr>
+        <img width="550" src="img/3c.png" alt="3c" class="problem-img">
+        <p></p><hr>
+      </div>
+
+      <footer>
+        <div><img src="/img/email-icon.png" alt=""><a href="mailto:aaronhe07@gmail.com">aaronhe07@gmail.com</div>
+          <div><img src="/img/github-icon.png" alt=""><a href="https://github.com/AaronHe7/">AaronHe7</a></div>
+          <div><img src="/img/youtube-icon.png" alt=""><a href="https://www.youtube.com/channel/UCpLNLIJ66Lqjwm-E69qbW8w">Aaron He</a></div>
+      </footer>
+      <script src="../blog.js"></script>
+      <script src="../blog-post.js"></script>
+    </body>
+</html>

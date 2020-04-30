@@ -1,4 +1,7 @@
 function addBlogPost(url, title, date, tags) {
+    if (!document.getElementById("blog-post-template")) {
+        return;
+    }
     let blogDiv = document.getElementById("blog-post-template").cloneNode(true);
     blogDiv.removeAttribute("id");
     blogDiv.removeAttribute("style");
@@ -15,7 +18,9 @@ function BlogPost(title, date, tags) {
     this.tags = tags;
 }
 
-let blogPosts = [new BlogPost("Euclid Contest 2020 Solutions", "April 29, 2020", ["Math", "Problem solving"])];
+let blogPosts = [
+    new BlogPost("Euclid Contest 2020 Solutions", "April 29, 2020", ["Math", "Problem solving"])
+];
 
 for (let i = 0; i < blogPosts.length; i++) {
     addBlogPost(i, blogPosts[i].title, blogPosts[i].date, blogPosts[i].tags);
