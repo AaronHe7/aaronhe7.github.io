@@ -9,7 +9,20 @@ body {
   height: 100%;
 }
 
+h1 {
+  font-size: 26px;
+}
+
+h1 a {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
 a {
+  font-size: 16px;
   color: #466db2;
   text-decoration: none;
   transition: all 250ms;
@@ -17,6 +30,14 @@ a {
 
 a:hover {
   color: #0062a0;
+}
+
+div {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
 }
 
 nav {
