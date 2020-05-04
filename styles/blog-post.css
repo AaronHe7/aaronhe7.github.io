@@ -7,6 +7,12 @@
     justify-content: center;
 }
 
+br {
+    display: block;
+    content: "";
+    margin-top: 15px;
+}
+
 .details > div {
     margin-right: 20px;
 }
@@ -20,11 +26,22 @@
 .problem-img {
     display: inline-block;
 }
-.problem-img > img {
-    width: 75%;
+
+.problem-img {
+    height: 200px;
 }
-@media only screen and (max-width: 600px) {
-    .problem-img > img {
-        width: 120%
-    }
+
+.statement {
+    background-color: #cae8f1;
+    border-left: 5px solid #4545b9;
+    padding: 5px 0 5px 10px;
+    margin-top: 5px;
+}
+
+.outline {
+    border: 1px solid black;
+}
+
+.outline {
+    border-spacing: 5px 10px;
 }

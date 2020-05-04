@@ -12,5 +12,4 @@ function setPost() {
     detailsDiv.appendChild(seperatorDiv);
     detailsDiv.appendChild(dateDiv);
 }
-
 setPost();
