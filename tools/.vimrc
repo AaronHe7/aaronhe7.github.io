@@ -1,12 +1,13 @@
+set guifont=Lucida_Console:h12
 set ruler
 set ts=4
 set sw=4
 set smartindent
 set backspace=indent,eol,start
 
-cd %:h
+cd %:p:h
 
-inoremap {<CR> {<CR>}<Esc>O
+inoremap {<CR> {<CR><BS>}<Esc>O
 imap <C-BS> <C-W>
 syntax enable
 

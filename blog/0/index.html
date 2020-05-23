@@ -26,14 +26,14 @@
         <img class="header-img" src="./img/header-img.png" alt="header image">
         <p>These are my solutions to the <a href="https://cemc.uwaterloo.ca/contests/past_contests/2020/2020EuclidContest.pdf">2020 Euclid Contest</a> by the University of Waterloo. Due to the coronavirus, the contest has been cancelled,
             and as of April 27, 2020, the contest problems have been released. 
-            This page is a formal write up for the solutions. It is a great place to see how math solutions are structured, however these do not provide motivation
-            for the solutions. For a playlist to video explanations that provide a step by step guide, click <a href="https://www.youtube.com/playlist?list=PLtNSIs-SknFgE2yWsHr7Qr3wgqMjeKQyC">here</a>.
+            This page is a formal write up for the solutions. It leads you directly to the solution but omits some of the work required to obtain the solution.
+            For a playlist to video explanations that provide a step by step guide, click <a href="https://www.youtube.com/playlist?list=PLtNSIs-SknFgE2yWsHr7Qr3wgqMjeKQyC">here</a>.
         </p>
         <p>In summary, this year's Euclid had very many algebra problems, and all the geometry problems in this contest were also algebra heavy.
             Problem nine was the most interesting one for me. The problem can be solved using a recurrence relation, and requires one to think outside
             of the box and create a closed form for this relation. The image above depicts the construction in the problem.
-            \(\)
         </p>
+        <p style="display: none">\(\)</p>
         <hr>
         <h2>Problem 1</h2>
         <div class="statement">
@@ -47,7 +47,7 @@
         </div>
         <p>
           The slope of the line is \(7-5 \over 1-(-1)\) \(=1.\) Since the point \((-1, 5)\) exists on the line, then the point \((-1+1, 5+1) = (0, 6)\) must as well.
-          Thus the y-intercept is \(y = 6.\)
+          Thus, the y-intercept is \(y = 6.\)
         </p><hr>
         <div class="statement">
           (c) The lines with equations \(y = 3x + 7,\) \(y = x + 9,\) and \(y = mx + 17\) intersect at a single point. Determine the value of \(m.\)
@@ -74,15 +74,15 @@
           should she add to change this ratio to \(1 : 6\)?
         </div>
         <p>
-            Initially, let there be \(g\) gold marbles and \(b\) black marbles. Then, \(b \over g\) \(=\) \(1 \over 4\) \(\implies 4b=g.\) Since there are \(100\) marbles,
-            \(b + g = 100 \implies 5b = 100 \implies b=20.\) This means there are \(20\) black marbles and \(80\) gold marbles. Let the number of marbles that Eleanor add be
-            \(x.\) Then, \(20 \over 80 + x\) \(=\) \(1 \over 6\) \(\implies x=40.\) Hence she must add \(40\) gold marbles.
+          Initially, let there be \(g\) gold marbles and \(b\) black marbles. Then, \(b \over g\) \(=\) \(1 \over 4\) \(\implies 4b=g.\) Since there are \(100\) marbles,
+          \(b + g = 100 \implies 5b = 100 \implies b=20.\) This means there are \(20\) black marbles and \(80\) gold marbles. Let the number of marbles that Eleanor add be
+          \(x.\) Then, \(20 \over 80 + x\) \(=\) \(1 \over 6\) \(\implies x=40.\) Hence, she must add \(40\) gold marbles.
         </p><hr>
         <div class="statement">
           (c) Suppose that \(n\) is a positive integer and that the value of \(\frac{n^2+n+15}n\) is an integer. Determine all possible values of \(n.\)
         </div>
         <p>
-            We can rewrite the expression as \(n + 1 + \)\(15 \over n.\) Since \(n + 1\) is an integer, all we need is for \(15 \over n\) to be an integer. Thus \(n\) must be a
+            We can rewrite the expression as \(n + 1 + \)\(15 \over n.\) Since \(n + 1\) is an integer, all we need is for \(15 \over n\) to be an integer. Then \(n\) must be a
             divisor of \(15.\) For positive integers, we can have \(n=1, 3, 5, 15.\)
         </p><hr>
         <h2>Problem 3</h2>
@@ -220,7 +220,7 @@
           <img class="problem-img" src="./img/6b.png" alt="6b">
         </div>
         <p>
-          Triangle \(ABE\) is a right isosceles triange, so \(\angle ABE = 45^\circ ,\) and \(BCD\) is a \(30^\circ - 60^\circ - 90^\circ\) triangle, with \(\angle CBD = 30^\circ.\)
+          Triangle \(ABE\) is a right isosceles triangle, so \(\angle ABE = 45^\circ ,\) and \(BCD\) is a \(30^\circ - 60^\circ - 90^\circ\) triangle, with \(\angle CBD = 30^\circ.\)
           Now, \(\angle EBD = 135^\circ - 45^\circ - 30^\circ = 60^\circ,\) and \(BE = AB\sqrt 2 = 14.\) 
         </p>
         <p>
@@ -299,8 +299,8 @@
         </div>
         <img class="problem-img" src="./img/8b-diagram.png" alt="8b">
         <p>
-          See the diagram above. Let \(PB = x.\) Since \(A\) recieves the sound \(\frac12\) seconds after \(B,\) \(PB = x + \frac12 * \frac13 = x + \frac16.\)
-          \(C\) recieves the sound \(1\) second after \(A,\) so \(PC = x + \frac16 + 1 * \frac13 = x + \frac12.\) Now we can use a system of equations with law
+          See the diagram above. Let \(PB = x.\) Since \(A\) receives the sound \(\frac12\) seconds after \(B,\) \(PB = x + \frac12 * \frac13 = x + \frac16.\)
+          \(C\) receives the sound \(1\) second after \(A,\) so \(PC = x + \frac16 + 1 * \frac13 = x + \frac12.\) Now we can use a system of equations with law
           of cosines to find the value of \(x.\) First, let \(y = \cos(\angle PBC),\) then \(\cos(\angle PBA) = \cos(180^\circ - \angle PBC)\) \(= -\cos(\angle PBC) = -y.\)
           Using law of cosines in triangles \(PBA\) and \(PBC,\) we obtain the following system of equations:
           $$
@@ -399,7 +399,7 @@
           <strong>Case 2:</strong> \(a_1 + a_4 = 110\) and \(a_2 + a_3 = 106.\)
         </p>
         <p>
-          Using the same method as the previous case, \(2a_1 = 110 + 104 - 208 = 6 \implies a = 3.\) The second possible list is: \(a_1 = 3,\) \(a_2 = 5,\) \(a_3 = 101,\) \(a_4 = 107.\) It is easy
+          Using the same method as the previous case, \(2a_1 = 110 + 104 - 208 = 6 \implies a_1 = 3.\) The second possible list is: \(a_1 = 3,\) \(a_2 = 5,\) \(a_3 = 101,\) \(a_4 = 107.\) It is easy
           to verify that both lists work.
         </p><hr>
         <div class="statement">
@@ -407,16 +407,28 @@
         </div>
         <p>
           Once again, \(a_1 + a_2 = s_1,\) \(a_1 + a_3 = s_2,\) \(a_3 + a_5 = s_9,\) and \(a_4 + a_5 = s_{10}.\) Now, each number in the list appears four times in the sum, hence, \(4(a_1 + a_2 + a_3 + a_4 + a_5) = \sum\limits_{i = 1}^{10} s_i\)
-          \(\implies\) \(a_1 + a_2 + a_3 + a_4 + a_5 = a_3 + s_1 + s_{10}\) \(= \frac{\sum\limits_{i = 1}^{10} s_i}4\) \(\implies a_3 = \frac{\sum\limits_{i = 1}^{10} s_i}4 - s_1 - s_{10}.\) Hence it is possible to 
+          \(\implies\) \(a_1 + a_2 + a_3 + a_4 + a_5 = a_3 + s_1 + s_{10}\) \(= \frac{\sum\limits_{i = 1}^{10} s_i}4\) \(\implies a_3 = \frac{\sum\limits_{i = 1}^{10} s_i}4 - s_1 - s_{10}.\) Therefore, it is possible to 
           determine \(a_3\) based off of the values of \(s.\) Then it is also possible to determine \(a_1 = s_2 - a_3,\) and \(a_5 = s_9 - a_3.\) Finally \(a_2 = s_1 - a_1\) and \(a_4 = s_{10} - a_5.\) Since there is only
           one way to determine all the values of \(a,\) there is one possibility for the list.
         </p><hr>
         <div class="statement">
           (c) Suppose that \(n = 16.\) Prove that there are two different lists \(a_1, a_2, ..., a_{16}\) and \(b_1, b_2, ..., b_{16}\) that produce the same list of sums \(s_1, s_2,...,s_{120}.\)
         </div>
+        <p>
+          We can use a recursive process to generate two lists of size \(2n\), from two lists of size \(n\), with both pairs of lists satisfying the above property. From lists \(a_1, a_2, ..., a_n\) and \(b_1, b_2, ..., b_n\) with the
+          same pairwise sums, we can generate two new lists, \(a_1, a_2, ..., a_n, b_1 + x, b_2 + x, ..., b_n + x\) and \(b_1, b_2, ..., b_n, a_1 + x, a_2 + x, ..., a_n + x\), from a fixed constant \(x \ne 0\), which will also
+          have the same pairwise sums. Thus we can start with a simple case, for example \(n = 2,\) and the lists \(1, 4\), and \(2, 3\), where the elements sum to \(5\). Then, we can set \(x = 1\), and construct the case for \(n = 4\), which are the lists
+          \(1, 3, 4, 4\) and \(2, 2, 3, 5\). Repeat the process two more times to construct the case \(n = 16\). Note that the these two lists will be distinct, since the maximum value of both lists are different from the start, and they both 
+          increase by one and interchange between lists each time the process is applied, so the maximum values will be different when \(n = 16\) as well.
+        </p>
         <p></p><hr>
-        <p>Footnote: See problem 12 in <a href="https://drive.google.com/file/d/0B5b6n_Nz71-rYU0xWlp3MlpTSnJLdThvX0QyX3c3MzN1OGlz/view" alt="">this</a> contest, and 
-         problem 11 <a href="https://drive.google.com/file/d/0B5b6n_Nz71-rSWd4ZF91cG5Scy1BLXo3aXI4dWdOQzRZa0Z3/view">this</a> contest, for problems similar to Euclid 10.</p>
+        <h2>Footnotes: </h2>
+        <ul>
+          <li>The solution to 10c is credited to Franklin VP, who sent me the solution by email.</li>
+          <li>See problem 12 <a href="https://drive.google.com/file/d/0B5b6n_Nz71-rYU0xWlp3MlpTSnJLdThvX0QyX3c3MzN1OGlz/view" alt="">here</a>, and 
+            problem 11 <a href="https://drive.google.com/file/d/0B5b6n_Nz71-rSWd4ZF91cG5Scy1BLXo3aXI4dWdOQzRZa0Z3/view">here</a>, for problems similar to Euclid 10.
+          </li>
+        </ul>
       </div>
       <footer>
         <div><img src="/img/email-icon.png" alt=""><a href="mailto:aaronhe07@gmail.com">aaronhe07@gmail.com</div>
