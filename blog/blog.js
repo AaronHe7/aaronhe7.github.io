@@ -19,9 +19,10 @@ function BlogPost(title, date, tags) {
 }
 
 let blogPosts = [
-    new BlogPost("Euclid Contest 2020 Solutions", "April 29, 2020", ["Math", "Problem solving"])
+    new BlogPost("Euclid Contest 2020 Solutions", "April 29, 2020", ["math", "problem solving"]),
+//    new BlogPost("A Begin to Competitive Programming", "TBD", ["computer science", "algorithms"])
 ];
 
-for (let i = 0; i < blogPosts.length; i++) {
+for (let i = blogPosts.length - 1; i >= 0; i--) {
     addBlogPost(i, blogPosts[i].title, blogPosts[i].date, blogPosts[i].tags);
 }

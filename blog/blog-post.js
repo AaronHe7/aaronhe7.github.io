@@ -6,7 +6,7 @@ function setPost() {
     let seperatorDiv = document.createElement("div");
     let dateDiv = document.createElement("div");
     authorDiv.textContent = "Aaron He";
-    seperatorDiv.textContent = "♦";
+    seperatorDiv.textContent = "◆";
     dateDiv.textContent = blogPosts[id].date;
     detailsDiv.appendChild(authorDiv);
     detailsDiv.appendChild(seperatorDiv);

@@ -4,6 +4,7 @@
       <title>Aaron He</title>
       <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="/styles/styles.css">
+      <link type="text/css" rel="stylesheet" href="./styles.css">
       <link rel="icon" href="/img/favicon.png" type="image/x-icon">
     </head>
     <body>
@@ -15,12 +16,44 @@
           <a href="https://github.com/AaronHe7/" target="_blank">Github</a>
         </nav>
       </div>
-      <div class="content center">
-        <h1>Projects</h1>
-        <div>Tab work in progress</div>
-        <a href="https://github.com/AaronHe7/graphing-calculator">Graphing Calculator</a><br>
-        <a href="https://github.com/AaronHe7/path-finder">Pathfinder</a><br>
-        <a href="https://github.com/AaronHe7/chess">Chess</a><br>
+			<div class="content">
+				<h1 class="center">Projects</h1>
+        <div>
+        	<a href="https://github.com/AaronHe7/chess"><h2>Chess</h2></a>
+					<img src="./img/chess.png" alt="chess">
+					<p>
+						The game of chess programmed using JavaScript, including an AI that automatically plays chess by looking ahead a few moves, and 
+						evaluating the move based on the weight of each chess piece, and the position of the pieces. It uses the <a href="https://en.wikipedia.org/wiki/Minimax">minimax</a> algorithm, which is a form of iterative deeping depth-first search. For any board state, it considers
+						every possible move, and recursively calls the function on the new board when a move is applied. Since chess boards have many
+						possibilities, the minimax algorithm is limited to a certain depth. I have plans in the future to revamp this simple website
+						into one where accounts can be created.
+					</p>
+				</div>
+				<div>
+					<a href="https://github.com/AaronHe7/graphing-calculator"><h2>Graphing Calculator</h2></a>
+					<img src="./img/calculator.png" alt="calculator">
+					<p>
+						A tool used to graph functions and obtain properties of functions. This is similar to the TI-84 calculator made by Texas
+						Instruments. Some of its features are being able to graph multiple functions with multiple colors, determine the roots of
+						a graph, and calculating the point of intersection of any pair of graphs. It uses Newton's method, which uses the derivative
+						of a function to estimate the root, and applies this process on the new estimate to obtain an even more accurate result.
+						The display is also interactive; one can use a mouse and drag around the graph, and use the scroll wheel to zoom in and out.
+					</p>
+				</div>
+				<div>
+        	<a href="https://github.com/AaronHe7/path-finder"><h2>Pathfinder</h2></a>
+					<img src="./img/pathfinder.png" alt="pathfinder">
+					<p>
+						An application built in Python and rendered using the pygame library. This uses the 
+						<a href="https://en.wikipedia.org/wiki/A*_search_algorithm">A* search algorithm</a>, which determines the minimum 
+						path between two node. In this application, the nodes are each of the grid tiles, and the neighbors are the 
+						eight surrounding grid tiles. The algorithm uses a heuristic function, which estimates the distance between a given
+						node and the goal node. This function guides the search of the algorithm. During each step of an algorithm, the node
+						with the minimum score, which is the sum of the heuristic value and the weight already traversed, that is not visited
+						is considered. Then, each of its neighbors is analyzed. If the path to the node then to a neighbor is a better path,
+						the algorithm updates the minimum distance between the start node and the neighbor node. 
+					</p>
+				</div>
       </div>
       <footer>
         <div><img src="/img/email-icon.png" alt=""><a href="mailto:aaronhe07@gmail.com">aaronhe07@gmail.com</div>
