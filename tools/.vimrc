@@ -5,6 +5,9 @@ set sw=2
 set smartindent
 set backspace=indent,eol,start
 
+"" enter fullscreen
+au GUIEnter * simalt ~x
+
 cd ~/Desktop
 cd %:p:h
 
@@ -14,7 +17,7 @@ syntax enable
 
 autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
 autocmd filetype cpp nnoremap <C-N> :w <bar> !g++ -g -std=c++14 % -o %:r -Wl,--stack,268435456 && %:r<CR>
-" Go to C:\MinGW\bin and run mingw-get.exe install gdb
+autocmd filetype java nnoremap <C-N> :w <bar> !java %:r<CR>
 autocmd filetype cpp nnoremap <C-H> :w <bar> !gdb %:r<CR>
 set number
 augroup numbertoggle

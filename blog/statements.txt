@@ -1,8 +1,0 @@
-1a
-If \(x = 11\), what is the value of \(\frac{3x + 6}{x + 2}\)?
-1b
-What is the y-intercept of the line that passes through \(A(-1, 5)\) and \(B(1, 7)\)?
-1c
-The lines with equations \(y = 3x + 7\), \(y = x + 9\), and \(y = mx + 17\) intersect at a single point. Determine the value of \(m\).
-2a
-(a) The three-digit positive integer \(m\) is odd and has three distinct digits. If thehundreds digit of \(m\) equals the product of the tens digit and ones (units) digit of\(m\), what is \(m\)?

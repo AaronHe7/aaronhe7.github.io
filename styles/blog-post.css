@@ -23,6 +23,11 @@ br {
     margin: auto;
 }
 
+.center-img {
+    display: block;
+    margin: auto;
+}
+
 .problem-img {
     display: inline-block;
 }

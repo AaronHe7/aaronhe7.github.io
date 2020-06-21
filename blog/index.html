@@ -19,7 +19,7 @@
     <div class="content">
         <h1>Blog</h1>
         <div>Here you will find my latest blog entries relating to math and computer science.</div>
-        <div class="blog-posts"> <!-- blog posts -->
+        <div class="blog-posts">
             <div class="blog-post" id="blog-post-template" style="display: none;">
                 <a class="blog-post-header" href=""></a>
                 <div class="info">
@@ -35,5 +35,10 @@
           <div><img src="/img/youtube-icon.png" alt=""><a href="https://www.youtube.com/channel/UCpLNLIJ66Lqjwm-E69qbW8w">Aaron He</a></div>
       </footer>
     <script src="blog.js"></script>
+    <script>
+      for (let i = blogPosts.length - 1; i >= 0; i--) {
+        blogPosts[i].display();
+      }
+    </script>
     </body>
 </html>

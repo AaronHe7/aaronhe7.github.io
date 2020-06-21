@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Aaron He</title>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="/styles/styles.css">
+      <link type="text/css" rel="stylesheet" href="/styles/blog.css">
+      <link type="text/css" rel="stylesheet" href="/styles/blog-post.css">
+      <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+      <div class="header">
+        <nav class="grey">
+          <h1><a href="/">Aaron He</a></h1>
+          <a href="/projects">Projects</a>
+          <a href="/blog">Blog</a>
+          <a href="https://github.com/AaronHe7/" target="_blank">Github</a>
+        </nav>
+      </div>
+      <div class="content">
+        <div style="display: none;" id="post-id">1</div>
+        <h1 class="center">Autofill Title</h1>
+        <div class="details">Autofill Details</div>
+        <img width="300" class="center-img" src="./img/triangle.png/" alt="triangle">
+        <h2>Introduction</h2>
+        <p>
+          This data structure problem is from the <a href="https://cemc.uwaterloo.ca/contests/computing/2019/stage%201/seniorEF.pdf">CCC 2019 Senior</a> Problem 5. The credit for the image above and problem
+          statement goes to the University of Waterloo.
+        </p>
+        <p>
+          Here is an example of an abstract data structure that is in the shape of an equilateral triangle. For every data structure, there must be a way to store data, and retrieve information
+          about the data structure. In this case, data is stored in each cell of the equilateral triangle, with the \(i\)-th row in the triangle containing \(i\) cells. Now, the data we are asked to retrieve
+          is slightly strange. Given a positive integer \(k\), we must find the sum of the maximum elements of each sub-triangle of size \(k\). For instance, if \(k = 3\), the sub-triangles in the above image
+          are \((3, 1, 2, 4, 2, 1)\), \((1, 4, 2, 6, 1, 4)\), and \((2, 2, 1, 1, 4, 2)\). The requested sum is \(4 + 6 + 4 = 14\).
+        </p>
+        <p>
+          Now, this data structure may seem inapplicable, however the methods used to query this data structure are certainly very useful. The algorithm we will be using for querying this data structure uses a divide an conquer
+          approach, which is the same approach used for <a href="https://en.wikipedia.org/wiki/Merge_sort">merge sort</a>, and <a href="https://en.wikipedia.org/wiki/Fenwick_tree">binary indexed trees</a>. Even though
+          we may not have much to gain from the data structure itself, there is a lot to learn from the approach to solving the problem.
+        </p>
+      </div>
+      <footer>
+        <div><img src="/img/email-icon.png" alt=""><a href="mailto:aaronhe07@gmail.com">aaronhe07@gmail.com</div>
+          <div><img src="/img/github-icon.png" alt=""><a href="https://github.com/AaronHe7/">AaronHe7</a></div>
+          <div><img src="/img/youtube-icon.png" alt=""><a href="https://www.youtube.com/channel/UCpLNLIJ66Lqjwm-E69qbW8w">Aaron He</a></div>
+      </footer>
+      <script src="../blog.js"></script>
+      <script src="../blog-post.js"></script>
+    </body>
+</html>
