@@ -57,8 +57,14 @@ nav a {
   color: black;
 }
 
+canvas {
+  display: block;
+  margin: auto;
+  box-shadow: 0 0 2px black;
+}
+
 .content {
-  padding: 30px 100px;
+  padding: 30px 50px;
   line-height: 1.5;
 }
 

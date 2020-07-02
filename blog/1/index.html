@@ -4,6 +4,7 @@
       <title>Aaron He</title>
       <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="/styles/styles.css">
+      <link type="text/css" rel="stylesheet" href="./styles.css">
       <link type="text/css" rel="stylesheet" href="/styles/blog.css">
       <link type="text/css" rel="stylesheet" href="/styles/blog-post.css">
       <link rel="icon" href="/img/favicon.png" type="image/x-icon">
@@ -25,6 +26,7 @@
         <div class="details">Autofill Details</div>
         <img width="300" class="center-img" src="./img/triangle.png" alt="triangle">
         <h2>Introduction</h2>
+        <p style="display: none">\(\)</p>
         <p>
           This data structure problem is from the <a href="https://cemc.uwaterloo.ca/contests/computing/2019/stage%201/seniorEF.pdf">CCC 2019 Senior</a> Problem 5. The credit for the image above and problem
           statement goes to the University of Waterloo.
@@ -36,10 +38,34 @@
           are \((3, 1, 2, 4, 2, 1)\), \((1, 4, 2, 6, 1, 4)\), and \((2, 2, 1, 1, 4, 2)\). The requested sum is \(4 + 6 + 4 = 14\).
         </p>
         <p>
-          Now, this data structure may seem inapplicable, however the methods used to query this data structure are certainly very useful. The algorithm we will be using for querying this data structure uses a divide an conquer
+          Now, this data structure may seem inapplicable to the real world, however the methods used to query this data structure are certainly very useful. The algorithm we will be using for querying this data structure uses a divide an conquer
           approach, which is the same approach used for <a href="https://en.wikipedia.org/wiki/Merge_sort">merge sort</a>, and <a href="https://en.wikipedia.org/wiki/Fenwick_tree">binary indexed trees</a>. Even though
           we may not have much to gain from the data structure itself, there is a lot to learn from the approach to solving the problem.
         </p>
+        <h2>Approaching the Problem</h2>
+        <p>
+          We start by considering a few algorithms. We can judge whether or not the algorithm is efficient enough, based on the constraints, which are \(1 \leq k \leq n \leq 3000\), where \(n\) is the number of rows in the entire triangle, and \(k\) is the size
+          of the sub-triangles we are considering. Each element in the triangle is a non-negative integer at most \(10^9\).
+        </p>
+        <p>
+          The very first algorithm to think of is a brute force algorithm, since it will be the simplest to code, and if it does not work, it can sometimes be a stepping stone to more efficient algorithms.
+          The most obvious solution is to iterate through all possible sub-triangles of size \(k\), and iterate through all elements of the sub-triangle, while keeping a running maximum. To analyze the time complexity of
+          this algorithm, we must consider a few things. First, how many elements are in a triangle of size \(x\)? Well, there is one element in the first row, two elements in the second row, and so on. Therefore, the number
+          of elements is \(1 + 2 + ... + x = \frac{x^2+x}2\), or \(O(x^2)\). Then, in the worst case scenario, there are \(O(n^2)\) starting positions for each sub-triangle, with \(O(k^2)\) elements in each sub-triangle. Hence, the time
+          complexity is \(O(n^2k^2)\), clearly too inefficient for the constraints.
+        </p>
+        <p>
+          What one can notice from the brute force solution is potentially a way to optimize the solution. If we do use a brute force solution, we are iterating through the same cells over and over many times, due to the large
+          overlaps of the sub-triangles. First, we can compute all sub-triangles of size \(1\), and then we can merge three triangles of size \(1\) into a triangle of size \(2\). In general, for computing a sub triangle of size \(k\), we 
+          first compute all sub-triangles of size \(k - 1\) recursively, then we merge three of them into a sub-triangle of size 2. Below is a demonstration of such process. Enter a value of \(k\) to see how it is broken down into three
+          triangles of size \(k - 1\). When \(k = 1\), we can do nothing, as the value in the cell is already the answer to the problem.
+        </p>
+        <canvas class="triangle-canvas-1"></canvas>
+        <button class="triangle-button-1">Set Subtriangle Size</button>
+        <h2>The Final Step</h2>
+        <p>The explanation of divide and conquer algorithm is work in progress. The diagram below shows this algorithm.</p>
+        <canvas class="triangle-canvas-2"></canvas>
+        <button class="triangle-button-2">Set Subtriangle Size</button>
       </div>
       <footer>
         <div><img src="/img/email-icon.png" alt=""><a href="mailto:aaronhe07@gmail.com">aaronhe07@gmail.com</div>
@@ -48,5 +74,6 @@
       </footer>
       <script src="../blog.js"></script>
       <script src="../blog-post.js"></script>
+      <script src="./script.js"></script>
     </body>
 </html>
