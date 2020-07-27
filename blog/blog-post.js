@@ -1,5 +1,5 @@
 function setPost() {
-    let id = parseInt(document.getElementById("post-id").textContent);
+    let id = document.getElementById("post-id").textContent;
     document.querySelector(".content > h1").textContent = blogPosts[id].title;
     let detailsDiv = document.querySelector(".content .details");
     detailsDiv.innerHTML = '';

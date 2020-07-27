@@ -15,10 +15,21 @@ inoremap {<CR> {<CR><BS>}<Esc>O
 imap <C-BS> <C-W>
 syntax enable
 
+""normal template
 autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
-autocmd filetype cpp nnoremap <C-N> :w <bar> !g++ -g -std=c++14 % -o %:r -Wl,--stack,268435456 && %:r<CR>
-autocmd filetype java nnoremap <C-N> :w <bar> !java %:r<CR>
-autocmd filetype cpp nnoremap <C-H> :w <bar> !gdb %:r<CR>
+
+""google code jam template
+""autocmd BufNewFile *.cpp 0r ~/.vim/templates/gcj.cpp
+
+""usaco template
+""autocmd BufNewFile *.cpp 0r ~/.vim/templates/usaco.cpp
+
+autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -g -std=c++14 % -o %:r -Wl,--stack,268435456<CR>
+autocmd filetype py nnoremap <F9> :w <bar> !python %:r<CR>
+autocmd filetype cpp nnoremap <F10> :!%:r <CR>
+autocmd filetype java nnoremap <F9> :w <bar> !java %:r<CR>
+autocmd filetype cpp nnoremap <F11> :w <bar> !gdb %:r<CR>
+
 set number
 augroup numbertoggle
     autocmd!
