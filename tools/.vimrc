@@ -28,6 +28,7 @@ autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -g -std=c++14 % -o %:r -Wl,--st
 autocmd filetype py nnoremap <F9> :w <bar> !python %:r<CR>
 autocmd filetype cpp nnoremap <F10> :!%:r <CR>
 autocmd filetype java nnoremap <F9> :w <bar> !java %:r<CR>
+" Go to C:\MinGW\bin and run mingw-get.exe install gdb
 autocmd filetype cpp nnoremap <F11> :w <bar> !gdb %:r<CR>
 
 set number
