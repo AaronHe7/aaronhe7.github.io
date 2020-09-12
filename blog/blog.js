@@ -19,7 +19,7 @@ function BlogPost(title, date, tags) {
 
 let blogPosts = [
     new BlogPost("Euclid Contest 2020 Solutions", "April 29, 2020", ["math", "problem solving"]),
-    new BlogPost("A Triangular Data Structure (Work in Progress)", "June 20, 2020", ["computer science", "divide and conquer", "dynamic programming"]),
+    new BlogPost("A Triangular Data Structure", "June 20, 2020", ["computer science", "divide and conquer", "dynamic programming"]),
 //    new BlogPost("A Begin to Competitive Programming", "TBD", ["computer science", "algorithms"])
 ];
 

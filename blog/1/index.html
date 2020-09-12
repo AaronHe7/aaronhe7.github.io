@@ -55,15 +55,47 @@
           complexity is \(O(n^2k^2)\), clearly too inefficient for the constraints.
         </p>
         <p>
-          What one can notice from the brute force solution is potentially a way to optimize the solution. If we do use a brute force solution, we are iterating through the same cells over and over many times, due to the large
-          overlaps of the sub-triangles. First, we can compute all sub-triangles of size \(1\), and then we can merge three triangles of size \(1\) into a triangle of size \(2\). In general, for computing a sub triangle of size \(k\), we 
-          first compute all sub-triangles of size \(k - 1\) recursively, then we merge three of them into a sub-triangle of size 2. Below is a demonstration of such process. Enter a value of \(k\) to see how it is broken down into three
-          triangles of size \(k - 1\). When \(k = 1\), we can do nothing, as the value in the cell is already the answer to the problem.
+          What one can notice from the brute force solution is a way to optimize the algorithm. When using a brute force solution, we are iterating through the same cells over and over many times, due to the large
+          overlaps of the sub-triangles. Therefore, our optimization should try to reduce the number of times we visit each cell. This is done by noticing that we can merge smaller triangles into larger ones.
+          Our next algorithm is as follows. If \(k = 1\), we don't have to do anything, because each sub-triangle of size \(1\) is a single cell. Otherwise, if \(k > 1\), we can recursively compute the solution for 
+          each sub-triangle of size \(k - 1\), and then to compute the maximum element in a triangle of size \(k\), we will merge three triangles of size \(k - 1\), by taking the maximum element in those three triangles. Below is a visualization of
+          this method. Try adjusting the size of the triangle to see how a triangle of size \(k\) can be broken down into three smaller triangles of size \(k - 1\).
+          triangles of size \(k - 1\).
         </p>
         <canvas class="triangle-canvas-1"></canvas>
         <button class="triangle-button-1">Set Subtriangle Size</button>
+        <p>
+          Once we have found the maximum element in all sub-triangles of size \(k\), make sure to sum them up. The time complexity is \(O(n^2k)\), which is better, but we still need to improve it.
+        </p>
         <h2>The Final Step</h2>
-        <p>The explanation of divide and conquer algorithm is work in progress. The diagram below shows this algorithm.</p>
+        <p>
+          With one final observation, we can reduce the linear factor of \(k\) into a logarithmic one. The flaw in our previous method is that breaking down a triangle of size \(k\) into triangles of size \(k - 1\) does not
+          break the problem down much. In fact, we can do much better. For example, our previous method breaks a triangle of size \(999\) into three triangle of size \(998\), but it is possible to break it down into
+          three triangles of size \(666\). Below, I have a proof that triangle of size \(k\) into three triangles of size \(\lceil{\frac 23}k \rceil\).
+        </p>
+        <p>
+          Let \((i, j)\) be the cell in the \(i\)-th row and \(j\)-th column. A triangle starting at \((i, j)\) will cover all the cells \((i', j')\), where \(i \le i' \le i + s\), and \(j \le j' \le j + i' - i\), where \(s\) 
+          is the size of the triangle. Without loss of generality, suppose that a sub-triangle of size \(k\) starts at \((0, 0)\). Now consider the union of the three sub-triangles of size \(k' = \lceil\frac 23k\rceil\) starting at 
+          \((0, 0)\), \((k - k', 0)\), and \((k - k', k - k')\).
+          A cell \((x, y)\) will be in one of these three sub-triangles if one of these condition is satisfied:
+          $$ 0 \le x \le k', 0 \le y \le x$$
+          $$ k - k' \le x \le k, 0 \le y \le x - (k - k') $$
+          $$ k - k' \le x \le k, k - k' \le y \le x' $$
+        </p>
+        <p>
+          Note that in the last two inequalities, the constraints on \(x\) are the same, and since \(k - k' \le x - (k - k')\), we can combine the last two inequalities into:
+          $$ k - k' \le x \le k, 0 \le y \le x $$
+          Finally, we can combine this new inequality with the first inequality in our list to get:
+          $$ 0 \le x \le k, 0 \le y \le x $$
+          Hence the union of the three sub-triangles of size \(k'\) covers the entire sub-triangle of size \(k\).
+        </p>
+        <p>
+          We are almost done, however there is still one more tricky case to consider. When \(k = 2\), we have \(\lceil \frac 23k\rceil = k\). Fortunately for this case, we can set \(k' = 1\) instead and it will
+          still work. Now, our solution has a time complexity of \(O(n^2\log k)\). Now we have our final algorithm. Once again, if \(k = 1\), we can do nothing. If \(k = 2\), choose \(k' = 1\), and otherwise if \(k > 2\), we will have \(\lceil \frac 23k \rceil < k\),
+          hence we can set \(k' = \lceil \frac 23k\rceil\). Now recursively compute the maximum for every sub-triangle of size \(k'\), and for every sub-triangle of size \(k\), combine the corresponding three triangles of size \(k'\) to get
+          the maximum element. Once we are done, sum all the maximum elements and return that as our answer. Below is a visualization of breaking a triangle of size \(k\) into three sub-triangles of size \(\lceil\frac 23k\rceil\). Try
+          changing \(k\) to see what happens!
+        </p>
         <canvas class="triangle-canvas-2"></canvas>
         <button class="triangle-button-2">Set Subtriangle Size</button>
       </div>
