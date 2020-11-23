@@ -28,7 +28,7 @@
         <h2>Introduction</h2>
         <p style="display: none">\(\)</p>
         <p>
-          This data structure problem is from the <a href="https://cemc.uwaterloo.ca/contests/computing/2019/stage%201/seniorEF.pdf">CCC 2019 Senior</a> Problem 5. The credit for the image above and problem
+          This data structure problem is from the fifth problem of the <a href="https://cemc.uwaterloo.ca/contests/computing/2019/stage%201/seniorEF.pdf">CCC 2019 Senior</a>. The credit for the image above and problem
           statement goes to the University of Waterloo.
         </p>
         <p>
@@ -39,7 +39,7 @@
         </p>
         <p>
           Now, this data structure may seem inapplicable to the real world, however the methods used to query this data structure are certainly very useful. The algorithm we will be using for querying this data structure uses a divide an conquer
-          approach, which is the same approach used for <a href="https://en.wikipedia.org/wiki/Merge_sort">merge sort</a>, and <a href="https://en.wikipedia.org/wiki/Fenwick_tree">binary indexed trees</a>. Even though
+          approach, which is the same approach used for <a href="https://en.wikipedia.org/wiki/Merge_sort">merge sort</a> and <a href="https://en.wikipedia.org/wiki/Fenwick_tree">binary indexed trees</a>. Even though
           we may not have much to gain from the data structure itself, there is a lot to learn from the approach to solving the problem.
         </p>
         <h2>Approaching the Problem</h2>
@@ -58,9 +58,8 @@
           What one can notice from the brute force solution is a way to optimize the algorithm. When using a brute force solution, we are iterating through the same cells over and over many times, due to the large
           overlaps of the sub-triangles. Therefore, our optimization should try to reduce the number of times we visit each cell. This is done by noticing that we can merge smaller triangles into larger ones.
           Our next algorithm is as follows. If \(k = 1\), we don't have to do anything, because each sub-triangle of size \(1\) is a single cell. Otherwise, if \(k > 1\), we can recursively compute the solution for 
-          each sub-triangle of size \(k - 1\), and then to compute the maximum element in a triangle of size \(k\), we will merge three triangles of size \(k - 1\), by taking the maximum element in those three triangles. Below is a visualization of
-          this method. Try adjusting the size of the triangle to see how a triangle of size \(k\) can be broken down into three smaller triangles of size \(k - 1\).
-          triangles of size \(k - 1\).
+          each sub-triangle of size \(k - 1\), and then to compute the maximum element in a triangle of size \(k\), we will merge three triangles of size \(k - 1\), by taking the maximum element in those three triangles. 
+          Below is a visualization of this method. Try adjusting the size of the triangle to see how a triangle of size \(k\) can be broken down into three smaller triangles of size \(k - 1\).
         </p>
         <canvas class="triangle-canvas-1"></canvas>
         <button class="triangle-button-1">Set Subtriangle Size</button>
@@ -70,14 +69,14 @@
         <h2>The Final Step</h2>
         <p>
           With one final observation, we can reduce the linear factor of \(k\) into a logarithmic one. The flaw in our previous method is that breaking down a triangle of size \(k\) into triangles of size \(k - 1\) does not
-          break the problem down much. In fact, we can do much better. For example, our previous method breaks a triangle of size \(999\) into three triangle of size \(998\), but it is possible to break it down into
-          three triangles of size \(666\). Below, I have a proof that triangle of size \(k\) into three triangles of size \(\lceil{\frac 23}k \rceil\).
+          break the problem down much, and still takes too many steps. For example, our previous method breaks a triangle of size \(999\) into three triangle of size \(998\), but it is possible to break it down into
+          three triangles of size \(666\). Below, I have a proof that three triangles of size \(\lceil{\frac 23}k \rceil\) can completely cover a triangle of size \(k\).
         </p>
         <p>
-          Let \((i, j)\) be the cell in the \(i\)-th row and \(j\)-th column. A triangle starting at \((i, j)\) will cover all the cells \((i', j')\), where \(i \le i' \le i + s\), and \(j \le j' \le j + i' - i\), where \(s\) 
+          Let \((i, j)\) be the cell in the \(i\)-th row and \(j\)-th column. A triangle starting at \((i, j)\) will cover all cells \((i', j')\), where \(i \le i' \le i + s\), \(j \le j' \le j + i' - i\), and \(s\) 
           is the size of the triangle. Without loss of generality, suppose that a sub-triangle of size \(k\) starts at \((0, 0)\). Now consider the union of the three sub-triangles of size \(k' = \lceil\frac 23k\rceil\) starting at 
           \((0, 0)\), \((k - k', 0)\), and \((k - k', k - k')\).
-          A cell \((x, y)\) will be in one of these three sub-triangles if one of these condition is satisfied:
+          A cell \((x, y)\) will be in one of these three sub-triangles if at least one of these conditions is satisfied:
           $$ 0 \le x \le k', 0 \le y \le x$$
           $$ k - k' \le x \le k, 0 \le y \le x - (k - k') $$
           $$ k - k' \le x \le k, k - k' \le y \le x' $$
@@ -90,14 +89,21 @@
           Hence the union of the three sub-triangles of size \(k'\) covers the entire sub-triangle of size \(k\).
         </p>
         <p>
-          We are almost done, however there is still one more tricky case to consider. When \(k = 2\), we have \(\lceil \frac 23k\rceil = k\). Fortunately for this case, we can set \(k' = 1\) instead and it will
-          still work. Now, our solution has a time complexity of \(O(n^2\log k)\). Now we have our final algorithm. Once again, if \(k = 1\), we can do nothing. If \(k = 2\), choose \(k' = 1\), and otherwise if \(k > 2\), we will have \(\lceil \frac 23k \rceil < k\),
+          We are almost done, however there is still one more tricky case to consider. When \(k = 2\), we have \(\lceil \frac 23k\rceil = k\). Fortunately, for this case, we can set \(k' = 1\) instead and it will
+          still work. Now, our solution has a time complexity of \(O(n^2\log k)\). Here is our final algorithm: once again, if \(k = 1\), we can do nothing. If \(k = 2\), choose \(k' = 1\), and otherwise if \(k > 2\), we will have \(\lceil \frac 23k \rceil < k\),
           hence we can set \(k' = \lceil \frac 23k\rceil\). Now recursively compute the maximum for every sub-triangle of size \(k'\), and for every sub-triangle of size \(k\), combine the corresponding three triangles of size \(k'\) to get
-          the maximum element. Once we are done, sum all the maximum elements and return that as our answer. Below is a visualization of breaking a triangle of size \(k\) into three sub-triangles of size \(\lceil\frac 23k\rceil\). Try
+          the maximum element. Once we are done, sum all the maximum elements and return that as our answer. Below is a visualization of separating a triangle of size \(k\) into three sub-triangles of size \(\lceil\frac 23k\rceil\). Try
           changing \(k\) to see what happens!
         </p>
         <canvas class="triangle-canvas-2"></canvas>
         <button class="triangle-button-2">Set Subtriangle Size</button>
+        <hr>
+        <h2>Notes</h2>
+        <ul>
+          <li>
+            <a href="https://www.youtube.com/watch?v=Sq1zydcGuC8">Here</a> is a video solution to this problem, which uses a more geometric apporach to prove the correctness of the algorithm.
+          </li>
+        </ul>
       </div>
       <footer>
         <div><img src="/img/email-icon.png" alt=""><a href="mailto:aaronhe07@gmail.com">aaronhe07@gmail.com</div>
