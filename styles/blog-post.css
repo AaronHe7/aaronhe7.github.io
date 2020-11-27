@@ -1,3 +1,11 @@
+h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 .details {
     width: 100%;
     text-align: center;

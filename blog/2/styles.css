@@ -1,0 +1,37 @@
+.election-table {
+  border: 1px solid grey;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+.election-table tr > td > img {
+  height: 250px;
+}
+
+.election-table td {
+  margin: 0 50px;
+  text-align: center;
+}
+
+.election-table caption {
+  font-weight: bold;
+  background-color: #f0f0f0;
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+}
+
+.republican {
+  border-bottom: 5px solid red;
+}
+
+.democrat {
+  border-bottom: 5px solid blue;
+}
+
+.horizontal {
+  display: flex;
+}
+
+.horizontal > table {
+  margin: 25px 15px 10px 15px;
+}
