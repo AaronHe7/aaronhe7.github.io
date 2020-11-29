@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 # Info from https://www.fec.gov/resources/cms-content/documents/federalelections2016.pdf
 # 2016 Presidential Election
 import json
@@ -36,5 +37,16 @@ for i in range(electoral, 0, -1):
 win = electoral//2 + 1
 for i in range(electoral + 1):
 	print(i, "%.4f" % (100 * min_amount[i]) + "%")
-print("It is possible to win the election with", "%.4f" % (100 * min_amount[win]) + "% of the popular vote using these " + str(len(state_combination[win])) + " states:")
-print(state_combination[win])
+print("It is possible to win the election with", "%.4f" % (100 * min_amount[win]) + "% of the popular vote using these", len(state_combination[win]), "states:")
+for i in state_combination[win]:
+	print("#" + i + ", ", end="")
+
+# Graphs
+#for i in range(len(min_amount)):
+#	min_amount[i] *= 100
+#plt.xlabel("Electoral Votes")
+#plt.ylabel("Minimum Popular Vote (%)")
+#plt.plot(min_amount)
+#plt.axis([0, 538, 0, 100])
+#plt.grid(True)
+#plt.show()

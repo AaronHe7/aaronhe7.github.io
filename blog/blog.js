@@ -20,7 +20,7 @@ function BlogPost(title, date, tags) {
 let blogPosts = [
     new BlogPost("Euclid Contest 2020 Solutions", "April 29, 2020", ["math", "problem solving"]),
     new BlogPost("A Triangular Data Structure", "June 20, 2020", ["computer science", "divide and conquer", "dynamic programming"]),
-    //new BlogPost("How to Win and Lose an Election at Once (2016 U.S. Presidential Election)", "November 23, 2020", ["U.S. politics", "statistics"]),
+    new BlogPost("How to Win and Lose an Election at the Same Time: Donald Trump vs. Hillary Clinton", "November 23, 2020", ["U.S. politics", "statistics"]),
 ];
 
 blogPosts.sort(function(a, b) {

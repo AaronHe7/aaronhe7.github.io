@@ -30,6 +30,11 @@
 
 .horizontal {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
 }
 
 .horizontal > table {
