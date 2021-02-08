@@ -28,8 +28,11 @@
   box-shadow: 0 0 10px grey;
 }
 
-.card {
+.small {
   width: 250px;
+}
+
+.card {
   border-radius: 10px;
   margin: 10px;
 }
